@@ -6,3 +6,14 @@ rails db:rollback
 git remote add origin https://github.com/SakunM/sample-app.git
 git branch -M main
 git push -u origin main
+
+git remote rm origin
+
+fatal: remote origin already exists.
+と表示されてリポジトリにpushできない問題
+
+originが存在していると書かれているのでそれを削除する
+
+$ git remote rm origin originの削除
+$ git remote add origin git@bitbucket.org:ユーザー名/アプリ名.git
+$ git push -u origin master
