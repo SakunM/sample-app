@@ -1,0 +1,6 @@
+rails generate scaffold User name:string email:string
+rails generate scaffold Micropost content:text user_id:integer
+rails db:migrate
+rails db:rollback
+
+git remote add origin https://github.com/SakkunM/sample_app.git
