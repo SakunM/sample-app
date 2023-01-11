@@ -17,3 +17,7 @@ originが存在していると書かれているのでそれを削除する
 $ git remote rm origin originの削除
 $ git remote add origin git@bitbucket.org:ユーザー名/アプリ名.git
 $ git push -u origin master
+
+git switch -c new-topic
+
+rails generate controller StaticPages home help
