@@ -21,3 +21,9 @@ $ git push -u origin master
 git switch -c new-topic
 
 rails generate controller StaticPages home help
+
+localhost:3000/static_pages/home
+localhost:3000/static_pages/help
+
+rails test:controllers
+
