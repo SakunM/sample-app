@@ -6,6 +6,8 @@ rails db:rollback
 git remote add origin https://github.com/SakunM/sample-app.git
 git branch -M main
 git push -u origin main
+git switch main
+git merge new-topic
 
 git remote rm origin
 
