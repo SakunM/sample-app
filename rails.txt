@@ -3,4 +3,6 @@ rails generate scaffold Micropost content:text user_id:integer
 rails db:migrate
 rails db:rollback
 
-git remote add origin https://github.com/SakkunM/sample_app.git
+git remote add origin https://github.com/SakunM/sample-app.git
+git branch -M main
+git push -u origin main
