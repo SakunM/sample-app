@@ -41,3 +41,49 @@ rails test:integration
 rails test:helpers
 
 rails generate controller Users new
+
+rails generate model User name:string email:string
+rails db:migrate
+
+user = User.new(name: "Michael hartl", email: "michael@example.com")
+
+User.create(name: 'A Nother', email: 'another@example.com')
+foo = User.create(name: 'Foo', email: 'foo@bar.com')
+foo.destroy
+foo.created_at
+foo.updated_at
+User.find_by(email: 'another@example.com')
+User.find_by(name: 'Michael hartl')
+user.email = 'foo@bar.com'
+mh.update_attribute(:name, "mamo")
+mh.update(name: 'Micheal Hartl', email: 'michael@example.com')
+
+migrateが終わらない。
+db/test.sqlite3 を削除することで、rails db:migrate RAILS_ENV=test ができると思いますよ
+rails db:migrate RAILS_ENV=test
+
+user = User.new(name: '', email: "mamo@example.com")
+user.errors.full_messages
+
+user = User.new(name: '', email: '')
+msgs = user.errors.messages
+msgs[:email]
+
+u = User.new(name: 'a'*51, email: 'a'*244 + '@example.com')
+u.errors.messages
+
+rails generate migration add_index_to_users_email
+
+rails generate migration add_password_digest_to_users password_digest:string
+
+u = User.new(name: 'mamo', email: 'mamo@example.com')
+u = User.new(name: 'mamo', email: 'mamo@example.com', password: 'hoge',password_confirmation: 'hoge' )
+
+User.create(name: "Michael Hartl", email: "michael@example.com", password: "foobar", password_confirmation: "foobar")
+
+uer = User.find_by(email: 'michael@example.com')
+uer.password_digest
+uer.authenticate('foobaz')
+uer.update_attribute(:name, 'mamo')
+
+
