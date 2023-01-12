@@ -22,6 +22,12 @@ $ git push -u origin master
 
 git switch -c new-topic
 
+マージ後に削除
+git branch -d ブランチ名
+マージしないで削除
+git branch -D ブランチ名
+
+
 rails generate controller StaticPages home help
 
 localhost:3000/static_pages/home
