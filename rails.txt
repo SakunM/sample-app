@@ -35,3 +35,9 @@ localhost:3000/static_pages/help
 
 rails test:controllers
 
+rails generate integration_test site_layout
+
+rails test:integration
+rails test:helpers
+
+rails generate controller Users new
