@@ -86,4 +86,28 @@ uer.password_digest
 uer.authenticate('foobaz')
 uer.update_attribute(:name, 'mamo')
 
+Rails.env.development?
+Rails.env.test?
+
+user = User.first
+puts user.attributes.to_yaml
+y user.attributes
+
+localhost:3000/users/1
+
+user.update(name: 'Example User', email: 'example@railstutorial.org', password: 'foobar', password_confirmation: 'foobar')
+
+localhost:3000/signup?admin=1
+
+user = User.new(name: 'Foo Bar', email: 'foo@invalid', password: 'dude', password_confirmation: 'dude')
+user.errors.full_messages
+
+helper.pluralize(1,'error')
+
+rails generate integration_test users_signup
+
+rails db:migrate
+
+
+
 
