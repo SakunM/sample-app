@@ -9,6 +9,12 @@ git push -u origin main
 git switch main
 git merge new-topic
 
+新しいブランチ(topic)を作ってそこに移動
+git switch -c topic
+
+全部やり直す
+git reset --hard
+
 git remote rm origin
 
 fatal: remote origin already exists.
@@ -24,6 +30,7 @@ git switch -c new-topic
 
 マージ後に削除
 git branch -d ブランチ名
+git branch -d new-topic
 マージしないで削除
 git branch -D ブランチ名
 
