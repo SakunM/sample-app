@@ -108,6 +108,35 @@ rails generate integration_test users_signup
 
 rails db:migrate
 
+rails generate controller Sessions new
+
+localhost:3000/login
+
+rails generate integration_test users_login
+
+rails test test/integration/users_login_test.rb
+
+mamo@example.com
+foobar
+
+mamoru
+mamoru@sakuma.com
+password
+
+session[:user_id] = User.first.id
+@current_user ||= User.find_by(id: session[:user_id])
+
+example@railstutorial.org
+foobar
+
+rails importmap:install turbo:install stimulus:install
+
+mh = User.find_by(email: 'michael@example.com')
+
+rails test test/integration/users_login_test.rb
+
+
+
 
 
 
