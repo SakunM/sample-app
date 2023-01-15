@@ -195,6 +195,8 @@ foobar
 
 rails generate integration_test users_index
 rails test test/integration/users_index_test.rb
+rails test test/controllers/users_controller_test.rb
+
 
 git add -A
 git commit -m "before admin"
@@ -202,7 +204,14 @@ git switch main
 git merge topic
 git switch topic
 
+rails generate migration add_admin_to_users admin:boolean
+
+localhost:3000/login
+example@railsturorial.org
 
 
-
-
+$ git add -A
+$ git commit -m "Finish user edit, update, index, and destroy actions"
+$ git switch main
+$ git merge updating-users
+$ git push
