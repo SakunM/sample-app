@@ -170,7 +170,7 @@ us = User.all
  name: "Michael Example",   
  email: "michael@example.com",
 
- localhost:3000/login
+localhost:3000/login
  Rails Tutorial
  exapmple@railstutrial.org
  password
@@ -184,7 +184,25 @@ localhost:3000/users/1/edit
 
 current_user
 
- 
+rm db/development.sqlite3
+rails db:create db:migrate
+こうするとエラーが発生せず、マイグレーションし直すことができた。
+rails db:seed
+
+
+example@railsturorial.org
+foobar
+
+rails generate integration_test users_index
+rails test test/integration/users_index_test.rb
+
+git add -A
+git commit -m "before admin"
+git switch main
+git merge topic
+git switch topic
+
+
 
 
 
