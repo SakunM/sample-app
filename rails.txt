@@ -148,7 +148,43 @@ rails generate migration add_remember_digest_to_users remember_digest:string
 
 http://localhost:3000/users/4
 
+us = User.all
 
+ id: 1,
+ name: "Rails Tutorial",
+ email: "exapmple@railstutrial.org",
+
+ id: 2,
+ name: "Rails Tutorial",
+ email: "foo@bar.com",
+ 
+ id: 3,                     
+ name: "mamo",
+ email: "mamo@example.com",
+
+ id: 4,  
+ name: "mamoru",
+ email: "mamoru@sakuma.com",
+
+ id: 5,                     
+ name: "Michael Example",   
+ email: "michael@example.com",
+
+ localhost:3000/login
+ Rails Tutorial
+ exapmple@railstutrial.org
+ password
+
+rails generate integration_test users_edit
+rails test test/integration/users_edit_test.rb
+ 
+rails test test/controllers/users_controller_test.rb
+
+localhost:3000/users/1/edit
+
+current_user
+
+ 
 
 
 

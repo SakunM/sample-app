@@ -4,10 +4,11 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user &.authenticate(params[:session][:password])
+      forwading_url = session[:forwading_url]
       reset_session
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
       log_in user
-      redirect_to user
+      redirect_to forwading_url || user
     else
       flash.now[:danger] = 'Invalid email/password comination'
       render 'new', status: :unprocessable_entity  
